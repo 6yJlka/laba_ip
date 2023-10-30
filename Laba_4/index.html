@@ -1,0 +1,39 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Оформление заказа</title>
+    <link rel="stylesheet" href="style.css">
+</head>
+<body>
+    <h1>Оформление заказа товаров</h1>
+
+    <form id="order-form">
+        <label for="item-name">Наименование товара:</label>
+        <input type="text" id="item-name" required>
+
+        <label for="item-price">Стоимость:</label>
+        <input type="number" id="item-price" required>
+
+        <button type="button" id="add-item">Добавить</button>
+    </form>
+
+<table>
+    <thead>
+        <tr>
+            <th>Наименование</th>
+            <th>Стоимость</th>
+            <th>Действия</th>
+        </tr>
+    </thead>
+    <tbody id="order-table">
+    </tbody>
+</table>
+
+
+    <p>Общая стоимость заказа: <span id="total-price">0</span></p>
+
+    <script src="app.js"></script>
+</body>
+</html>

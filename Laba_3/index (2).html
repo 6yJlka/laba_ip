@@ -1,0 +1,44 @@
+<!DOCTYPE html>
+<html>
+<head>
+    <meta charset="utf-8">
+    <title>Дерево элементов страницы</title>
+    <script type="text/javascript" src="main.js"></script>
+</head>
+<body>
+    <div id="tree-container">
+        <ul>
+            <li>Элемент A
+                <ul>
+                    <li>Подэлемент A1</li>
+                    <li>Подэлемент A2</li>
+                </ul>
+            </li>
+            <li>Элемент B</li>
+            <li>Элемент C
+                <ul>
+                    <li>Подэлемент C1</li>
+                </ul>
+            </li>
+            <div>
+                <ul>
+                    <li>
+                        <ul>
+                            <li>Подэлемент C2</li>
+                            <li>Подэлемент C3</li>
+                        </ul>
+                    </li>Подэлемент С4<li>
+                    </li>Подэлемент С5<li>
+                        <ul>
+                            <li>Подэлемент С6</li>
+                        </ul>
+                    </li>
+                </ul>
+            </div>
+        </ul>
+    </div>
+    <script>
+        output(document.getElementById("tree-container"), 0);
+    </script>
+</body>
+</html>

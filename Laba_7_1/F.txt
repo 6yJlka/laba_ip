@@ -1,0 +1,6 @@
+This is an example text for file F.
+You can place any text you want to process here.
+The text may contain characters e, E, r, t, U, which will be removed.
+Also, the text may contain other characters, which will be retained in file G.
+
+Simply add your text or modify this example as you wish.

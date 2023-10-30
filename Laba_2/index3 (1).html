@@ -1,0 +1,163 @@
+<!DOCTYPE html>
+<html lang="ru">
+<head>
+    <meta charset="utf-8">
+    <meta http-equiv="X-UA-Compatible" content="ie=edge">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>ICS6 Bootstrap</title>
+    <link href="http://e-learning.bmstu.ru/moodle/pluginfile.php/7546/mod_folder/content/0/bootstrap.min.css" rel="stylesheet">
+    <style>
+        html {
+            position: relative;
+            min-height: 100%;
+        }
+        body {
+            margin-bottom: 40px;
+        }
+        main {
+            margin-top: 15px;
+        }
+        footer {
+            height: 40px;
+            position: absolute;
+            bottom: 0;
+            width: 100%;
+        }
+        .my-primary {
+            background-color: #1A237E;
+            color: purple;
+        }
+        p {
+            color: blueviolet;
+        }
+        em {
+            color: aquamarine;
+                
+        }
+        s {
+            font-family: cursive;
+            color: palegreen;
+        }
+        table {
+            border: 1px solid black;
+            width: 500px;
+        }
+        th,td {
+            border: 1px solid black;
+        }
+        p : :hover {
+            color:orange;
+        }
+        table:hover {
+        color: #ffe; /* Цвет текста активного пункта */
+        background-color: #5488af; /* Цвет фона активного пункта */
+      }
+    </style>
+</head>
+<body>
+    <header>
+    <nav class="navbar navbar-expand-lg navbar-dark my-primary">
+        <a class="navbar-brand" href="#">Navbar</a>
+        <ul class="navbar-nav mr-auto">
+            <li class="nav-item active">
+            <a class="nav-link" href="#">Home
+            <span class="sr-only">(current)</span>
+            </a>
+            </li>
+            <li class="nav-item">
+                <a class="nav-link" href="#">Link</a>
+            </li>
+        </ul>
+    </nav>
+ </header>
+ <main class="container">
+    <div class="row">
+    <div class="col-4">
+    </div>
+        <div class="col-8">
+            <p>Здесь <em>нет</em> сложностей</p>
+            <p>Это <strong> важная часть</strong></p>
+            <p><s>Мячи</s></p>
+            <p><mark>Челюсти</mark></p>
+            <p><small>Азбука</small></p>
+            <p><var>F</var> = <var>m</var> x <var>a</var></p>
+            <p>H<sub>2</sub>O</p>
+            <p>a<sup>2</sup> + b<sup>2</sup> = c<sup>2</sup></p>
+            <pre>for(int i = 0; i &lt; 10;i++){
+                return true;
+            }</pre>
+            <p><cite>https://e-learning.bmstu.ru/iu6/pluginfile.php/3196/mod_resource/content/7/ЛР1_2.pdf</cite></p>
+        </div>
+    </div>
+   
+    <div class="row">
+        <div class="col-4">
+                <form>
+                    Имя: <input type="text" name="fname" /><br />
+                    Фамилия: <input type="text" name="lname" /><br />
+                    Пол: <input type="radio" name="gender" value="м" />M
+                    <input type="radio" name="gender" value="ж" />Ж<br/>
+                    <input type="submit" value="Отправить"/>
+                </form>
+        </div>
+    </div>
+        <div class="col-4">
+            <table>
+                <thead>
+                    <tr>
+                        <th class="my-primary">Время</th>
+                        <th class="my-primary">ЧС</th>
+                        <th class="my-primary">ЗН</th>
+                    </tr>
+                </thead>
+                <tbody>
+                    <tr>
+                        <td>08:30 - 10:05</td>
+                        <td></td>
+                        <td>ФВ</td>
+                    </tr>
+                    <tr>
+                        <td>10:15 - 11:50</td>
+                        <td>Правоведение</td>
+                        <td></td>
+                    </tr>
+                    <tr>
+                        <td>12:00 - 13:35</td>
+                        <td></td>
+                        <td>Базы данных</td>
+                    </tr>
+                    <tr>
+                        <td>13:50 - 15:25</td>
+                        <td>ТВМС</td>
+                        <td></td>
+                    </tr>
+                </tbody>
+                <tfoot></tfoot>
+            </table>
+        </div>
+    </div>
+    <div class="row">
+        <div class="col">
+            <p>Здесь <em>нет</em> сложностей</p>
+            <p>Это <strong> важная часть</strong></p>
+            <p><s>Мячи</s></p>
+            <p><mark>Челюсти</mark></p>
+            <p><small>Азбука</small></p>
+            <p><var>F</var> = <var>m</var> x <var>a</var></p>
+            <p>H<sub>2</sub>O</p>
+            <p>a<sup>2</sup> + b<sup>2</sup> = c<sup>2</sup></p>
+            <pre>for(int i = 0; i &lt; 10;i++){
+                return true;
+            }</pre>
+            <p><cite>https://e-learning.bmstu.ru/iu6/pluginfile.php/3196/mod_resource/content/7/ЛР1_2.pdf</cite></p>
+        </div>
+    </div>
+    </main>
+    <footer class="my-primary">
+        <div class="container">
+        <p class="footer-text">Footer</p>
+    </div>
+    </footer>
+   </body>
+   </html>
+   
