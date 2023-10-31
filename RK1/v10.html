@@ -1,0 +1,63 @@
+//Дан массив чисел arr_a. Найти сумму элементов, кратных 23, и поместить её на место первого четного элемента.
+<!DOCTYPE html>
+<html>
+<head>
+    <title>Донских Д.Г. ИУ6-33Б, Вариант 10, Дан массив чисел arr_a. Найти сумму элементов, кратных 23, и поместить её на место первого четного элемента.</title>
+    <script>
+        function solveTask() {
+            
+            var arr_aInput = document.getElementById('arr_a').value;
+            
+            var arr_a = arr_aInput.split(',').map(Number);
+            
+            for (var i = 0; i < arr_a.length; i++) {
+                if (isNaN(arr_a[i])) {
+                    alert("Введите корректные числа, разделенные запятой.");
+                    return;
+                }
+            }
+
+            var sum = 0;
+            var firstEvenIndex = -1;
+
+            for (var i = 0; i < arr_a.length; i++) {
+                if (arr_a[i] % 23 === 0) {
+                    sum += arr_a[i];
+                }
+
+                if (arr_a[i] % 2 === 0 && firstEvenIndex === -1) {
+                    firstEvenIndex = i;
+                }
+            }
+
+            if (sum === 0) {
+                alert("В массиве нет элементов, кратных 23.");
+                return;
+            }
+
+            if (firstEvenIndex === -1) {
+                alert("В массиве нет четных элементов.");
+                return;
+            }
+
+            arr_a[firstEvenIndex] = sum;
+
+            document.getElementById('originalArray').textContent = "Исходный массив: " + arr_aInput;
+            document.getElementById('modifiedArray').textContent = "Модифицированный массив: " + arr_a.join(', ');
+            document.getElementById('sum').textContent = "Сумма элементов, кратных 17: " + sum;
+        }
+    </script>
+</head>
+<body>
+    <h1>Вводи данные сюда</h1>
+    <form>
+        <label for="arr_a">Введите массив чисел (через запятую):</label>
+        <input type="text" id="arr_a" value="1,23,2,3,4,46,6,7,8,9,10">
+        <br>
+        <button type="button" onclick="solveTask()">Решить задачу</button>
+    </form>
+    <p id="originalArray"></p>
+    <p id="modifiedArray"></p>
+    <p id="sum"></p>
+</body>
+</html>
