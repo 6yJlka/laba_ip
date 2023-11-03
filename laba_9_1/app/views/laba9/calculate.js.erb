@@ -1,0 +1,15 @@
+$('#results').empty();
+
+
+$('#results').append('<p>Количество палиндромов: <%= @count %></p>');
+
+var table = $('<table>').append('<tr><th>Число</th><th>Квадрат</th></tr>');
+
+<% @palindromes.each do |palindrome| %>
+  var row = $('<tr>');
+  row.append('<td><%= j(palindrome[:number]) %></td>');
+  row.append('<td><%= j(palindrome[:square]) %></td>');
+  table.append(row);
+<% end %>
+
+$('#results').append(table);

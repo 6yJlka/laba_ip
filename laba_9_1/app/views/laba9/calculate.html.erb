@@ -1,0 +1,15 @@
+<h1>Результаты</h1>
+<div id="results"></div>
+<p>Количество палиндромов: <%= @count %></p>
+<table>
+  <tr>
+    <th>Число</th>
+    <th>Квадрат</th>
+  </tr>
+  <% @palindromes.each do |palindrome| %>
+    <tr>
+      <td><%= palindrome[:number] %></td>
+      <td><%= palindrome[:square] %></td>
+    </tr>
+  <% end %>
+</table>
