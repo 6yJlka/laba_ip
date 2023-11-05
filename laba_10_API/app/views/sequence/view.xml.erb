@@ -1,0 +1,17 @@
+<?xml version="1.0" encoding="UTF-8"?> 
+<output>
+<% if @error %>
+    <error><%= @error %></error>
+<% else %>
+<input><%= @input %></input>
+
+<calculations>
+    <% @subs.each.with_index(1) do |subseq, ind| %>
+    <sequence data-index="<%= ind %>"><%= subseq %></sequence>
+    <% end %>
+</calculations>
+<answer>
+    <sequence><%= @result %></sequence>
+</answer>
+<% end %>
+</output>
