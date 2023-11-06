@@ -1,0 +1,12 @@
+xml.instruct! :xml, version: "1.0"
+xml.results do
+  xml.count @count
+  xml.palindromes do
+    @palindromes.each do |palindrome|
+      xml.palindrome do
+        xml.number palindrome[:number]
+        xml.square palindrome[:square]
+      end
+    end
+  end
+end

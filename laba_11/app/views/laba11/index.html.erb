@@ -1,0 +1,6 @@
+<h1>Подсчет палиндромов</h1>
+   <%= form_tag(laba11_calculate_path, method: 'get') do %>
+     <label for="n">Введите n: </label>
+     <%= text_field_tag :n %>
+     <%= submit_tag 'Рассчитать' %>
+<% end %>
