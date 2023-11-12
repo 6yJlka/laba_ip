@@ -1,6 +1,6 @@
 <h1>Подсчет палиндромов</h1>
 <%= form_tag(laba8_calculate_path, method: 'get') do %>
   <label for="n">Введите n: </label>
-  <%= text_field_tag :n %>
+  <%= text_field_tag :n, nil, pattern: '\d+', title: 'Введите целое положительное число' %>
   <%= submit_tag 'Рассчитать' %>
 <% end %>
