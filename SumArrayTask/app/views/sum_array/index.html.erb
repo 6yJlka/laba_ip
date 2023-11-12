@@ -1,0 +1,9 @@
+<h1>Результат вычислений</h1>
+
+<%= form_tag(root_path, method: :get) do %>
+  <label for="arr_a">Введите значения массива (через запятую):</label>
+  <%= text_field_tag :arr_a, @default_values[:arr_a].join(','), pattern: '^[0-9,]+$', title: 'Введите только положительные целые числа через запятую' %>
+  <%= submit_tag 'Вычислить' %>
+<% end %>
+
+<p>Массив после выполнения задания: <%= @default_values[:arr_a] %></p>
